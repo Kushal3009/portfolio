@@ -31,21 +31,42 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/mailServices', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to send message")
+      }
+
       toast({
         title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: "Thank you for connecting with me.",
       })
+
       setFormData({
         name: "",
         email: "",
         subject: "",
         message: "",
       })
+
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
       setIsSubmitting(false)
-    }, 1500)
+    }
   }
+
 
   return (
     <section id="contact" className="py-16 md:py-24 bg-muted/50">

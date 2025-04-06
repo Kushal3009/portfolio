@@ -36,7 +36,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col justify-center space-y-4"
+            className="flex flex-col justify-center space-y-4 order-2 lg:order-1"
           >
             <div className="space-y-2">
               <motion.h1
@@ -83,7 +83,7 @@ export default function Hero() {
                 asChild
                 className="backdrop-blur-sm bg-background/50 border-primary/20 hover:bg-background/80"
               >
-                <a href="/resume.pdf" download>
+                <a href="/Kushal Resume2.pdf" download>
                   Download CV <Download className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -118,7 +118,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
             <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-primary/5 p-1 backdrop-blur-sm">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-full z-0"></div>
