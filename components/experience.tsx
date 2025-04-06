@@ -94,7 +94,7 @@ export default function Experience() {
                   />
 
                   <div className={`p-1 md:p-6 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
-                    <Card className="backdrop-blur-sm bg-background/80 border-primary/10 hover:shadow-md transition-all duration-300">
+                    <Card className="hover:bg-background/80 hover:border-b-2 hover:border-primary transition-all duration-300">
                       <CardHeader>
                         <div className="flex items-center gap-2 mb-1">
                           <Briefcase className="h-4 w-4 text-primary" />

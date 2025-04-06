@@ -22,41 +22,36 @@ const projects = [
     description: "A collaborative task management application with real-time updates and team collaboration features.",
     image: "/placeholder.svg?height=200&width=400",
     tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-    demoLink: "https://project-demo.com",
     githubLink: "https://github.com/username/project",
   },
   {
-    title: "Social Media Dashboard",
-    description: "An analytics dashboard for social media platforms with data visualization and reporting features.",
+    title: "Real Time Risk Management(RTRMS)",
+    description: "A Real-Time Risk Management System (RTRMS) designed for financial institutions to perform Beginning of Day (BOD), End of Day (EOD) operations, capture live market snapshots, and calculate client margins dynamically. The system ensures real-time monitoring of client exposure, portfolio risk, and margin requirements to support informed decision-making and regulatory compliance.",
     image: "/placeholder.svg?height=200&width=400",
-    tags: ["React", "Chart.js", "Node.js", "Express", "MongoDB"],
-    demoLink: "https://project-demo.com",
-    githubLink: "https://github.com/username/project",
+    tags: ["React", "Node.js", "Express", "MSSQL"],
   },
   {
     title: "Weather Application",
     description: "A weather forecast application with location-based services and interactive maps.",
     image: "/placeholder.svg?height=200&width=400",
     tags: ["React", "OpenWeather API", "Leaflet", "CSS"],
-    demoLink: "https://project-demo.com",
-    githubLink: "https://github.com/username/project",
+    // githubLink: "https://github.com/username/project",
   },
   {
     title: "Blog Platform",
     description: "A content management system for blogs with markdown support and user authentication.",
     image: "/placeholder.svg?height=200&width=400",
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    demoLink: "https://project-demo.com",
-    githubLink: "https://github.com/username/project",
+    // githubLink: "https://github.com/username/project",
   },
   {
-    title: "Real-time Chat Application",
-    description: "A real-time messaging platform with private and group chat functionality.",
+    title: "Customer Support Complain or Complain Ticket Management System",
+    description: "A customer generate complain or ticket then support team can manage the ticket and resolve it.",
     image: "/placeholder.svg?height=200&width=400",
-    tags: ["React", "Socket.io", "Express", "MongoDB"],
-    demoLink: "https://project-demo.com",
-    githubLink: "https://github.com/username/project",
+    tags: ["React", "Express", "MSSQL", "Node.js"],
+    // githubLink: "https://github.com/username/project",
   },
+
 ]
 
 export default function Projects() {
@@ -115,10 +110,13 @@ export default function Projects() {
               whileHover={{ y: -5 }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="relative"
+              className="relative group"
             >
-              <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg backdrop-blur-sm bg-background/80 border-primary/10">
-                <div className="relative overflow-hidden h-48">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-500 group-hover:scale-105"></div>
+
+              <Card className="relative h-full overflow-hidden transition-all duration-300 backdrop-blur-sm bg-background/80 border border-transparent rounded-xl">
+
+                {/* <div className="relative overflow-hidden h-48">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500"
                     style={{
@@ -127,7 +125,7 @@ export default function Projects() {
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-                </div>
+                </div> */}
                 <CardHeader className="pb-2">
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
@@ -142,7 +140,7 @@ export default function Projects() {
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-between">
-                  <Button variant="outline" size="sm" asChild className="border-primary/20 hover:bg-primary/10">
+                  {/* <Button variant="outline" size="sm" asChild className="border-primary/20 hover:bg-primary/10">
                     <a
                       href={project.githubLink}
                       target="_blank"
@@ -152,7 +150,7 @@ export default function Projects() {
                       <Github className="h-4 w-4" />
                       Code
                     </a>
-                  </Button>
+                  </Button> */}
                 </CardFooter>
               </Card>
             </motion.div>
